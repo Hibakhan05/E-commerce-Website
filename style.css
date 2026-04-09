@@ -1,0 +1,136 @@
+body{
+    font-family: "Libre Baskerville", serif;
+    overflow-x: hidden;
+}
+.navbar{
+    position: sticky;
+    top: 0px;
+    z-index: 100;
+    width: 100%;
+    gap: 20px;
+    background-color: #1a1a2ee8;
+
+}
+.nav-link {
+    color: wheat !important;
+}
+.nav-link:hover {
+    color: black !important   ;
+}
+#nav-link-home{
+    color: wheat !important;
+}
+#nav-link-home:hover {
+    color: black  !important  ;
+}
+.navbar-brand{
+    font-weight: bold;
+  color: bisque;
+ pointer-events: none;
+ padding-left: 10px;
+}
+option {
+    text-transform: capitalize;
+}
+select {
+    text-transform: capitalize;
+}
+.card {
+    height: 500px;
+     border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+.card:hover {
+    transform: translateY(-5px);
+}
+.card-text {
+    display: -webkit-box;
+ -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.card-img-top {
+    height: 250px;
+    object-fit: contain;
+}
+.card-body {
+    overflow: hidden;
+}
+.carousel img {
+    height: 85vh;
+    object-fit: container;
+}
+#sidebar {
+    min-width: 50px;
+    background-color: #2c1810;
+    height: 85vh;
+    padding: 20px 0;
+}
+
+#sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#sidebar li {
+    cursor: pointer;
+    color: wheat;
+    padding: 15px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+#sidebar li:hover {
+    background-color: #5c3d2e;
+    padding-left: 30px;
+    transition: all 0.3s;
+}
+footer {
+    background-color: #2c1810;
+    color: wheat;
+    padding: 40px 20px 20px 20px;
+    margin-top: 20px;
+}
+
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+footer h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+footer h5 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer ul li {
+    padding: 5px 0;
+    color: wheat;
+}
+
+footer p {
+    color: wheat;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    border-top: 1px solid rgba(255,255,255,0.2);
+    padding-top: 15px;
+    font-size: 14px;
+}

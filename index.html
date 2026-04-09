@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-commerce Website</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&family=Pacifico&display=swap"
+    rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg ">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">InkHaven</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" id="nav-link-home" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+    <div class="d-flex gap-3 p-3" justify-content-center>
+      <select id="categoryDropdown" onchange="displayGenre()">
+        <option value="">Select Category</option>
+      </select>
+
+      <select id="genreDropdown" onchange="displayAuthor()">
+        <option value="">Select Genre</option>
+      </select>
+
+      <select id="authorDropdown" onchange="displayBooks()">
+        <option value="">Select Author</option>
+      </select>
+    </div>
+  </nav>
+<div class="d-flex">
+    <div id="sidebar">
+        <ul>
+            <li onclick="showAll()">All Books</li>
+            <li onclick="showCategory('fiction')">Fiction</li>
+            <li onclick="showCategory('nonFiction')">Non Fiction</li>
+            <li onclick="showCategory('horror')">Horror</li>
+            <li onclick="showCategory('crime')">Crime</li>
+        </ul>
+    </div>
+
+    <div style="flex:1">
+        <div id="carouselExampleFade" class="carousel slide carousel-fade">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="images/caraousal-1.png" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="images/qingyu-GbGit2Az57Y-unsplash.jpg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="images/thought-catalog-o0Qqw21-0NI-unsplash.jpg" class="d-block w-100" alt="...">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+        <div id="booksDisplay" class="row row-cols-1 row-cols-md-3 g-4 p-3"></div>
+    </div>
+</div>
+<footer>
+    <div class="footer-content">
+        <div>
+            <h3>InkHaven</h3>
+            <p>Today's reader is tomorrow's leader</p>
+        </div>
+        <div>
+            <h5>Categories</h5>
+            <ul>
+                <li>Fiction</li>
+                <li>Non Fiction</li>
+                <li>Horror</li>
+                <li>Crime</li>
+            </ul>
+        </div>
+        <div>
+            <h5>Contact Us</h5>
+            <p>inkhaven@gmail.com</p>
+            <p>+92 316 1234567</p>
+        </div>
+    </div>
+    <p class="footer-bottom">© 2026 InkHaven. All Rights Reserved.</p>
+</footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
+    integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
+    crossorigin="anonymous"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>
