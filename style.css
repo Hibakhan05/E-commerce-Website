@@ -8,24 +8,24 @@ body{
     z-index: 100;
     width: 100%;
     gap: 20px;
-    background-color: #1a1a2ee8;
+    background-color: #1a1a2efb;
 
 }
 .nav-link {
-    color: wheat !important;
+    color: rgb(224, 194, 138) !important;
 }
 .nav-link:hover {
-    color: black !important   ;
+    color:white !important   ;
 }
 #nav-link-home{
-    color: wheat !important;
+    color: rgb(224, 194, 138) !important;
 }
 #nav-link-home:hover {
-    color: black  !important  ;
+    color: white  !important  ;
 }
 .navbar-brand{
     font-weight: bold;
-  color: bisque;
+  color: bisque !important;
  pointer-events: none;
  padding-left: 10px;
 }
@@ -64,8 +64,14 @@ select {
 #sidebar {
     min-width: 50px;
     background-color: #2c1810;
-    height: 85vh;
     padding: 20px 0;
+    position: sticky;
+    top: 45px; 
+    height: 85vh;
+    overflow-y: auto;
+}
+.d-flex {
+    align-items: flex-start;
 }
 
 #sidebar ul {
@@ -133,4 +139,111 @@ footer p {
     border-top: 1px solid rgba(255,255,255,0.2);
     padding-top: 15px;
     font-size: 14px;
+}
+#bookSummary {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 50%;
+    margin: 30px auto;
+    background-color: #f9f3ee;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+#bookSummary img {
+    width: 80px;
+    height: 110px;
+    object-fit: contain;
+}
+
+#bookDetails h4 {
+    color: #2c1810;
+    font-size: 16px;
+}
+
+#bookDetails p {
+    color: #5c3d2e;
+    font-weight: bold;
+}
+#checkoutForm {
+    width: 50%;
+    margin: 0 auto 40px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+#checkoutForm input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-family: "Libre Baskerville", serif;
+}
+
+#checkoutForm h5 {
+    color: #2c1810;
+    margin-top: 10px;
+}
+
+#deliveryOptions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#deliveryOptions label {
+    background-color: #f9f3ee;
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+#confirmBtn {
+    background-color: #5c3d2e;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: "Libre Baskerville", serif;
+    font-size: 16px;
+    margin-top: 10px;
+}
+#confirmationBox {
+    text-align: center;
+    margin: 80px auto;
+    width: 50%;
+    background-color: #f9f3ee;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+#checkmark {
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+#confirmationBox h2 {
+    color: #2c1810;
+    margin-bottom: 15px;
+}
+
+#confirmationBox p {
+    color: #5c3d2e;
+    font-size: 16px;
+}
+
+#confirmationBox button {
+    background-color: #5c3d2e;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: "Libre Baskerville", serif;
+    margin-top: 20px;
+    font-size: 16px;
 }

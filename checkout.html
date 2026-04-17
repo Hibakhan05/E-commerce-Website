@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce Website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&family=Pacifico&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg ">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">InkHaven</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="nav-link-home" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="d-flex gap-3 p-3" justify-content-center>
+            <select id="categoryDropdown" onchange="displayGenre()">
+                <option value="">Select Category</option>
+            </select>
+
+            <select id="genreDropdown" onchange="displayAuthor()">
+                <option value="">Select Genre</option>
+            </select>
+
+            <select id="authorDropdown" onchange="displayBooks()">
+                <option value="">Select Author</option>
+            </select>
+        </div>
+    </nav>
+    <div id="bookSummary">
+    <img id="bookImg" src="" alt="">
+    <div>
+        <h4 id="bookName"></h4>
+        <p>Price: Rs. <span id="bookPrice"></span></p>
+    </div>
+</div>
+<div id="checkoutForm">
+
+    <h5>Personal Information</h5>
+
+    <input type="text" id="userName" placeholder="Full Name">
+    <input type="text" id="userPhone" placeholder="Phone Number">
+    <input type="text" id="userAddress" placeholder="Address">
+
+    <h5>Delivery Type</h5>
+
+    <div id="deliveryOptions">
+        <label>
+            <input type="radio" name="delivery" value="150"> 
+            🚚 Standard Delivery — Rs. 150
+        </label>
+        <label>
+            <input type="radio" name="delivery" value="300"> 
+            ⚡ Express Delivery — Rs. 300
+        </label>
+        <label>
+            <input type="radio" name="delivery" value="0"> 
+            🏪 Store Pickup — Free
+        </label>
+    </div>
+
+    <h5>Order Total</h5>
+    <p>Book Price: Rs. <span id="summaryPrice"></span></p>
+    <p>Delivery: Rs. <span id="deliveryPrice">0</span></p>
+    <p><strong>Total: Rs. <span id="totalPrice"></span></strong></p>
+
+    <button id="confirmBtn" onclick="confirmOrder()">Confirm Order ✅</button>
+
+</div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
+        integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
+        crossorigin="anonymous"></script>
+    <script src="checkout.js"></script>
+</body>
+
+</html>

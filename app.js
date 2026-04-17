@@ -121,7 +121,7 @@ var allBooks = {
                 "goosebumps": {
                     name: "Goosebumps",
                     price: 8.99,
-                    src :"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRS8ohQk8DyDRG2enPHBWr439lilW_YKh0wFA&s" ,
+                    src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRS8ohQk8DyDRG2enPHBWr439lilW_YKh0wFA&s",
                     description: "Goosebumps (1992) by RL Stine is a series of horror novels aimed at young readers."
                 },
                 "fear street": {
@@ -244,7 +244,9 @@ function displayBooks() {
       </div>
       <div class="card-footer d-flex justify-content-between align-items-center">
     <small class="text-muted">Price: Rs.${b.price}</small>
-    <button class="btn btn-sm" style="background-color:#5c3d2e; color:white;">Add to Cart</button>
+    <button class="btn btn-sm" style="background-color:#5c3d2e; color:white;" onclick="addToCart('${b.name}', ${b.price}, '${b.src}')">
+        Add to Cart
+    </button>
 </div>
     </div>
   </div>`;
@@ -270,7 +272,9 @@ function showAll() {
                                 </div>
                                 <div class="card-footer d-flex justify-content-between align-items-center">
                                     <small class="text-muted">Price: Rs.${b.price}</small>
-                                    <button class="btn btn-sm" style="background-color:#5c3d2e; color:white;">Add to Cart</button>
+                                    <button class="btn btn-sm" style="background-color:#5c3d2e; color:white;" onclick="addToCart('${b.name}', ${b.price}, '${b.src}')">
+                                        Add to Cart
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -279,7 +283,7 @@ function showAll() {
             }
         }
     }
-        booksDisplay.scrollIntoView({ behavior: "smooth" });
+    booksDisplay.scrollIntoView({ behavior: "smooth" });
 
 }
 function showCategory(category) {
@@ -297,8 +301,10 @@ function showCategory(category) {
                                 <p class="card-text">${b.description}</p>
                             </div>
                             <div class="card-footer d-flex justify-content-between align-items-center">
-                                <small class="text-muted">Price: Rs.${b.price}</small>
-                                <button class="btn btn-sm" style="background-color:#5c3d2e; color:white;">Add to Cart</button>
+                            <small class="text-muted">Price: Rs.${b.price}</small>
+                               <button class="btn btn-sm" style="background-color:#5c3d2e; color:white;" onclick="addToCart('${b.name}', ${b.price}, '${b.src}')">
+                                Add to Cart
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -309,6 +315,7 @@ function showCategory(category) {
     booksDisplay.scrollIntoView({ behavior: "smooth" });
 
 }
+function addToCart(name, price, src) {
+    var item = { name: name, price: price, src: src };
+ window.location.href = "checkout.html?name=" + encodeURIComponent(name) + "&price=" + price + "&src=" + encodeURIComponent(src);}    
 
-    
-    
